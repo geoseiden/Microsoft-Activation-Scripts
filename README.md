@@ -23,7 +23,7 @@ Scripts are working fine for Windows 11.
    Release date: 14-aug-2020<br/>
 
    **Downloads:** <br/>
-   https://github.com/massgravel/Microsoft-Activation-Scripts/releases
+   https://github.com/geoseiden/PyMAS/releases
 
 <br/> 
 
@@ -53,7 +53,7 @@ Online KMS         -  Windows / Server / Office  -  For 180 Days, renewal task n
 
 <hr />
 
-For any queries feel free to mail me at, windowsaddict@protonmail.com
+For any queries feel free to mail me at, geoseb290@gmail.com
 
 
 Made with Love ❤️
