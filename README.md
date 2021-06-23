@@ -23,7 +23,7 @@ Scripts are working fine for Windows 11.
    Release date: 14-aug-2020<br/>
 
    **Downloads:** <br/>
-   https://github.com/massgravel/Microsoft-Activation-Scripts/releases
+   https://github.com/geoseiden/PyMAS/releases
 
 <br/> 
 
