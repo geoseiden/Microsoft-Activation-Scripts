@@ -22,6 +22,7 @@ def mainmenu():
 
     root.title("PyMAS 1.0")
     root.config(background="#16161a")
+    root.resizable(False, False)
     Main_Options()
     menubars()
     root.config(menu=menubar)
