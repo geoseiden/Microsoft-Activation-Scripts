@@ -1,11 +1,13 @@
 import os
 import subprocess
 import tkinter as tk
+import urllib
 import webbrowser
 from tkinter import *
 import csv
 from tkinter import ttk
 from tkinter import messagebox
+import pandas
 
 global root
 root=tk.Tk()
@@ -61,7 +63,7 @@ def down():
     tv.heading("1",text="ISO_ID")
     tv.heading("2",text="ISO_Name")
 
-    p=open("PyMas_Files/win.csv","r")    
+    p=open("PyMas_Files/win.csv","r")  
     d=csv.reader(p)
     l=list(d)
     c=1
@@ -236,7 +238,7 @@ def extras():
     l7=tk.Label(fr3,text="_______________________________",bg=bgc,fg=bgc)
     l7.grid(row=11,column=0)
 
-    b6=tk.Button(fr3,text="ISO Downloader",command=down,borderwidth=0,bg=btc,fg="white")
+    b6=tk.Button(fr3,text="Windows ISO Downloader",command=down,borderwidth=0,bg=btc,fg="white")
     b6.grid(row=12,column=0)
     coh(b6,"#616161",btc)
     

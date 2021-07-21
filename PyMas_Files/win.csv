@@ -1,14 +1,16 @@
-101,win7-Enterprise(64-Bit),http://care.dlservice.microsoft.com/dl/download/evalx/win7/x64/EN/7600.16385.090713-1255_x64fre_enterprise_en-us_EVAL_Eval_Enterprise-GRMCENXEVAL_EN_DVD.iso
-102,win7-Enterprise(32-Bit),http://care.dlservice.microsoft.com/dl/download/evalx/win7/x86/EN/7600.16385.090713-1255_x86fre_enterprise_en-us_EVAL_Eval_Enterprise-GRMCENEVAL_EN_DVD.iso
-103,win7-HomePremium(64-Bit),http://download.microsoft.com/download/E/A/8/EA804D86-C3DF-4719-9966-6A66C9306598/7601.24214.180801-1700.win7sp1_ldr_escrow_CLIENT_HOMEPREMIUM_x64FRE_en-us.iso
-104,win7-HomePremium(32-Bit),http://download.microsoft.com/download/E/D/A/EDA6B508-7663-4E30-86F9-949932F443D0/7601.24214.180801-1700.win7sp1_ldr_escrow_CLIENT_HOMEPREMIUM_x86FRE_en-us.iso
-105,win7-Pro(64-Bit),http://download.microsoft.com/download/0/6/3/06365375-C346-4D65-87C7-EE41F55F736B/7601.24214.180801-1700.win7sp1_ldr_escrow_CLIENT_PROFESSIONAL_x64FRE_en-us.iso
-106,win7-Pro(32-Bit),http://download.microsoft.com/download/C/0/6/C067D0CD-3785-4727-898E-60DC3120BB14/7601.24214.180801-1700.win7sp1_ldr_escrow_CLIENT_PROFESSIONAL_x86FRE_en-us.iso
-107,win7-Ultimate(64-Bit),http://download.microsoft.com/download/5/1/9/5195A765-3A41-4A72-87D8-200D897CBE21/7601.24214.180801-1700.win7sp1_ldr_escrow_CLIENT_ULTIMATE_x64FRE_en-us.iso
-108,win7-Ultimate(32-Bit),http://download.microsoft.com/download/1/E/6/1E6B4803-DD2A-49DF-8468-69C0E6E36218/7601.24214.180801-1700.win7sp1_ldr_escrow_CLIENT_ULTIMATE_x86FRE_en-us.iso
-109,win8-Enterprise(64-Bit),http://download.microsoft.com/download/5/3/C/53C31ED0-886C-4F81-9A38-F58CE4CE71E8/9200.16384.WIN8_RTM.120725-1247_X64FRE_ENTERPRISE_EVAL_EN-US-HRM_CENA_X64FREE_EN-US_DV5.ISO
-110,win8-Enterprise(32-Bit),http://download.microsoft.com/download/5/3/C/53C31ED0-886C-4F81-9A38-F58CE4CE71E8/9200.16384.WIN8_RTM.120725-1247_X86FRE_ENTERPRISE_EVAL_EN-US-HRM_CENA_X86FREE_EN-US_DV5.ISO
-111,win10-20H2(64-Bit),https://software-download.microsoft.com/db/Win10_20H2_English_x64.iso?t=1f0cf26f-1d17-437b-9fcb-7b21644dbeab&e=1625828756&h=5e6ab219c21ca93dccfcf02faba2d0ba
-112,win10-20H2(32-Bit),https://software-download.microsoft.com/db/Win10_20H2_English_x32.iso?t=1f0cf26f-1d17-437b-9fcb-7b21644dbeab&e=1625828756&h=e190c8ffa4206efe1db5c3a411cbe1a4
-113,win10-21H1(64-Bit),https://software-download.microsoft.com/db/Win10_21H1_English_x64.iso?t=b847162b-b452-4498-b6ea-9d02ad60605c&e=1625828449&h=2f789058a2899ff85fb03b1d3dcbae66
-114,win10-21H1(32-Bit),https://software-download.microsoft.com/db/Win10_21H1_English_x32.iso?t=b847162b-b452-4498-b6ea-9d02ad60605c&e=1625828449&h=edf916000d093375d74d3532824b51ad
+101,Windows 7 Enterprise (64-Bit),https://stuff.mtt-m1.workers.dev/Windows%207/Windows%207%20Enterprise%20with%20SP1/en_windows_7_enterprise_n_with_sp1_x64_dvd_u_677704.iso
+102,Windows 7 Enterprise (32-Bit),https://stuff.mtt-m1.workers.dev/Windows%207/Windows%207%20Enterprise%20with%20SP1/en_windows_7_enterprise_n_with_sp1_x86_dvd_u_677703.iso
+103,Windows 7 Home Premium (64-Bit),https://stuff.mtt-m1.workers.dev/Windows%207/Windows%207%20Home%20Premium%20with%20SP1/en_windows_7_home_premium_n_with_sp1_x64_dvd_u_676825.iso
+104,Windows 7 Home Premium (32-Bit),https://stuff.mtt-m1.workers.dev/Windows%207/Windows%207%20Home%20Premium%20with%20SP1/en_windows_7_home_premium_n_with_sp1_x86_dvd_u_676913.iso
+105,Windows 7 Pro (64-Bit),https://stuff.mtt-m1.workers.dev/Windows%207/Windows%207%20Professional%20with%20SP1/en_windows_7_professional_n_with_sp1_x64_dvd_u_677207.iso
+106,Windows 7 Pro (32-Bit),https://stuff.mtt-m1.workers.dev/Windows%207/Windows%207%20Professional%20with%20SP1/en_windows_7_professional_n_with_sp1_x86_dvd_u_677328.iso
+107,Windows 7 Ultimate (64-Bit),https://stuff.mtt-m1.workers.dev/Windows%207/Windows%207%20Ultimate%20with%20SP1/en_windows_7_ultimate_n_with_sp1_x64_dvd_u_677543.iso
+108,Windows 7 Ultimate (32-Bit),https://stuff.mtt-m1.workers.dev/Windows%207/Windows%207%20Ultimate%20with%20SP1/en_windows_7_ultimate_n_with_sp1_x86_dvd_u_677597.iso
+109,Windows 8 Pro N(64-Bit),https://stuff.mtt-m1.workers.dev/Windows%208/Windows%208/en_windows_8_pro_n_vl_x64_dvd_918677.iso
+110,Windows 8 Pro N(32-Bit),https://stuff.mtt-m1.workers.dev/Windows%208/Windows%208/en_windows_8_pro_n_vl_x86_dvd_918877.iso
+111,Windows 10 20H2(64-Bit),https://stuff.mtt-m1.workers.dev/Windows%2010/20H2/19042.XXX%20-%20June%202021/en_windows_10_consumer_editions_version_20h2_updated_jun_2021_x64_dvd_e638972f.iso
+112,Windows 10 20H2(32-Bit),https://stuff.mtt-m1.workers.dev/Windows%2010/20H2/19042.XXX%20-%20June%202021/en_windows_10_consumer_editions_version_20h2_updated_jun_2021_x86_dvd_7355a57d.iso
+113,Windows 10 21H1(64-Bit),https://stuff.mtt-m1.workers.dev/Windows%2010/21H1/19043.1052%20-%20June%202021/en_windows_10_consumer_editions_version_21h1_updated_jun_2021_x64_dvd_a6b56a79.iso
+114,Windows 10 21H1(32-Bit),https://stuff.mtt-m1.workers.dev/Windows%2010/21H1/19043.1052%20-%20June%202021/en_windows_10_consumer_editions_version_21h1_updated_jun_2021_x86_dvd_f4f19e03.iso
+115,Windows 10 Multiple editions (64-Bit),https://msdn.hackerc.at/Windows%2010/en-gb_windows_10_n_multiple_editions_x64_dvd_6846897.iso
+116,Windows 10 Multiple editions (32-Bit),https://msdn.hackerc.at/Windows%2010/en-gb_windows_10_n_multiple_editions_x86_dvd_6846905.iso
