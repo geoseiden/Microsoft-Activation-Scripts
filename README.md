@@ -1,8 +1,6 @@
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  CAUTION THE APP ONLY WORKS WITH VOLUME LISENCES!!
-</div>
-
+*******************************************************************************************************************************************
+⚠️ CAUTION THE APP ONLY WORKS WITH VOLUME LISENCES!!
+*******************************************************************************************************************************************
 
 **Note:**<br/>
 **Proposed** explanation and fix for Office C2R **Get genuine** banner:<br/>
@@ -43,7 +41,7 @@ Online KMS         -  Windows / Server / Office  -  For 180 Days, renewal task n
 <details>
 <summary>Click me to collapse/fold.</summary>
 <br/> 
-<a href="https://github.com/massgravel/Microsoft-Activation-Scripts/raw/master/MAS_1.4/Separate-Files-Version/Activators/HWID-KMS38_Activation/ReadMe_HWID.txt" target="_blank" rel="nofollow noreferrer noopener">Digital License (HWID) Activation</a> <br /> <a href="https://github.com/massgravel/Microsoft-Activation-Scripts/raw/master/MAS_1.4/Separate-Files-Version/Activators/HWID-KMS38_Activation/ReadMe_KMS38.txt" target="_blank">KMS38 Activation</a> <br /> <a href="https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS_1.4/Separate-Files-Version/Extras/KMS38_Protection/ReadMe.txt" target="_blank">KMS38_Protection</a> <br /> <a href="https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS_1.4/Separate-Files-Version/Activators/Online_KMS_Activation/_ReadMe.txt" target="_blank">Online KMS Activation</a> <br /> <a href="https://pastebin.com/raw/7Xyaf15Z" target="_blank">Activation Methods info and faqs</a>  <br /> <a href="https://pastebin.com/raw/jduBSazJ" target="_blank" rel="nofollow noreferrer noopener">Download Genuine Installation Media</a>
+<a href="https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/hwid_readme.txt" target="_blank" rel="nofollow noreferrer noopener">Digital License (HWID) Activation</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/kms38_readme.txt" target="_blank">KMS38 Activation</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/kms38prot_readme.txt" target="_blank">KMS38_Protection</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/oldact_readme.txt" target="_blank">Online KMS Activation</a> <br /> <a href="https://pastebin.com/raw/7Xyaf15Z" target="_blank">Activation Methods info and faqs</a>  <br /> <a href="https://pastebin.com/raw/jduBSazJ" target="_blank" rel="nofollow noreferrer noopener">Download Genuine Installation Media</a>
   </details></p> 
 
    [**Credits:**](https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS_1.4/Separate-Files-Version/Credits.txt)
