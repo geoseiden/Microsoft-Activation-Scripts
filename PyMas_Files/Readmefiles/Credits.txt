@@ -15,12 +15,7 @@
 
    These scripts are mostly a fork of other honourable developer's tools and scripts.
 
-   Homepages-
-   NsaneForums: (Login Required) https://www.nsaneforums.com/topic/316668-microsoft-activation-scripts/
-   GitHub: https://github.com/massgravel/Microsoft-Activation-Scripts
-   GitLab: https://gitlab.com/massgrave/microsoft-activation-scripts
-
-   Maintained by @WindowsAddict
+   Maintained by @Geoseiden
 
    To achieve this I have used the following projects as the base of this activator.  
    I would like to say thanks to the following authors for making such awesome projects.
@@ -107,16 +102,6 @@
    @s1ave77      slave77s S-M-R-T JATDevice MkIII
                  https://forums.mydigitallife.net/threads/44717/
 
-====================================
-   Kind Help:
-====================================
-   
-   Thanks to the following people for answering all of my queries. (In no particular order)
-   
-   @AveYo aka @BAU, @sponpa, @mspaintmsi @RPO, @leitek8, @mxman2k, @Yen, @abbodi1406
-
-   @BorrowedWifi for providing support in fixing English grammar errors in the Read Me.
-   @Chibi ANUBIS for testing scripts for ARM64 system.
 
 ----------------------------------------------------------------------------------------------------
 
