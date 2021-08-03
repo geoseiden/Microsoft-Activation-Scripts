@@ -1,3 +1,9 @@
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  CAUTION THE APP ONLY WORKS WITH VOLUME LISENCES!!
+</div>
+
+
 **Note:**<br/>
 **Proposed** explanation and fix for Office C2R **Get genuine** banner:<br/>
 https://infohost.github.io/office-license-is-not-genuine
