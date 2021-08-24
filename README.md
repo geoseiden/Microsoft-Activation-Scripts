@@ -20,7 +20,7 @@ Scripts are working fine for Windows 11.
    
 
    **Downloads:** <br/>
-   https://github.com/geoseiden/PyMAS/releases
+   https://github.com/geoseiden/PyWinact/releases
 
 <br/> 
 
@@ -41,10 +41,10 @@ Online KMS         -  Windows / Server / Office  -  For 180 Days, renewal task n
 <details>
 <summary>Click me to collapse/fold.</summary>
 <br/> 
-<a href="https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/hwid_readme.txt" target="_blank" rel="nofollow noreferrer noopener">Digital License (HWID) Activation</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/kms38_readme.txt" target="_blank">KMS38 Activation</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/kms38prot_readme.txt" target="_blank">KMS38_Protection</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/oldact_readme.txt" target="_blank">Online KMS Activation</a> <br /> <a href="https://pastebin.com/raw/7Xyaf15Z" target="_blank">Activation Methods info and faqs</a>  <br /> <a href="https://pastebin.com/raw/jduBSazJ" target="_blank" rel="nofollow noreferrer noopener">Download Genuine Installation Media</a>
+<a href="https://raw.githubusercontent.com/geoseiden/PyWinact/master/PyWinact_Files/Readmefiles/hwid_readme.txt" target="_blank" rel="nofollow noreferrer noopener">Digital License (HWID) Activation</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyWinact/master/PyWinact_Files/Readmefiles/kms38_readme.txt" target="_blank">KMS38 Activation</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyWinact/master/PyWinact_Files/Readmefiles/kms38prot_readme.txt" target="_blank">KMS38_Protection</a> <br /> <a href="https://raw.githubusercontent.com/geoseiden/PyWinact/master/PyWinact_Files/Readmefiles/oldact_readme.txt" target="_blank">Online KMS Activation</a> <br /> <a href="https://pastebin.com/raw/7Xyaf15Z" target="_blank">Activation Methods info and faqs</a>  <br /> <a href="https://pastebin.com/raw/jduBSazJ" target="_blank" rel="nofollow noreferrer noopener">Download Genuine Installation Media</a>
   </details></p> 
 
-   [**Credits:**](https://raw.githubusercontent.com/geoseiden/PyMAS/master/PyMas_Files/Readmefiles/Credits.txt)
+   [**Credits:**](https://raw.githubusercontent.com/geoseiden/PyWinact/master/PyWinact_Files/Readmefiles/Credits.txt)
 
 
 <hr />
