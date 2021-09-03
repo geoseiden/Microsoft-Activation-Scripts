@@ -13,10 +13,11 @@ Scripts are working fine for Windows 11.
 <hr>
 
 
-   **Microsoft Activation Scripts (MAS):**
+   **Python Windows Activator (PyWinAct):**
 
-   A collection of scripts for activating Microsoft products using HWID / KMS38 / Online KMS activation methods 
-   with a focus on open-source code, less antivirus detection and user-friendliness.
+   An app that shows how the exploits on Volume Lisence (VL) versions of Windows Server/10/8/7 and Office Work
+   Basically,
+   An app the activate VL versions of Windows and Office
    
    [**Download**](https://github.com/geoseiden/PyWinAct/releases/latest)
    <br/>
