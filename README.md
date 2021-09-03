@@ -18,9 +18,9 @@ Scripts are working fine for Windows 11.
    A collection of scripts for activating Microsoft products using HWID / KMS38 / Online KMS activation methods 
    with a focus on open-source code, less antivirus detection and user-friendliness.
    
-
-   **Downloads:** <br/>
-   https://github.com/geoseiden/PyWinAct/releases/latest
+   [**Download**](https://github.com/geoseiden/PyWinAct/releases/latest)
+   <br/>
+   
 
 <br/> 
 
