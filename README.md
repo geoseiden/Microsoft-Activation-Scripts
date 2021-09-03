@@ -20,7 +20,7 @@ Scripts are working fine for Windows 11.
    
 
    **Downloads:** <br/>
-   https://github.com/geoseiden/PyWinAct/releases
+   https://github.com/geoseiden/PyWinAct/releases/latest
 
 <br/> 
 
