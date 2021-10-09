@@ -1,13 +1,23 @@
+import sys
 import os
 import subprocess
 import tkinter as tk
-import urllib
 import webbrowser
 from tkinter import *
 import csv
 from tkinter import ttk
 from tkinter import messagebox
-import pandas
+
+
+def rp(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 global root
 root=tk.Tk()
@@ -17,9 +27,12 @@ global fgc
 fgc="White"
 global btc
 btc="#2B2B2B"
+st=ttk.Style()
+root.tk.call("source",rp("PyWinAct_Files/azure-dark.tcl"))
+st.theme_use("azure-dark")
 
 def mainmenu():
-    root.iconbitmap("PyMas_Files\pm.ico")
+    root.iconbitmap(rp("PyWinAct_Files\pm.ico"))
     #Frames Used
     global fr2
     fr2=tk.LabelFrame(root,text="Online KMS Activation",fg="white")
@@ -28,9 +41,11 @@ def mainmenu():
     global fr3
     fr3=tk.LabelFrame(root,text="Extras",fg="white")
     global fr4
-    fr4=tk.LabelFrame(root,text="ISO Downloader",fg="white")
+    fr4=tk.LabelFrame(root,text="Windows ISO Downloader",fg="white")
+    global fr5
+    fr5=tk.LabelFrame(root,text="Office ISO Downloader",fg="white")
 
-    root.title("PyMAS 1.0")
+    root.title("PyWinAct 2.0 By Geoseiden")
     root.config(background=bgc)
     root.resizable(False, False)
     Main_Options()
@@ -38,32 +53,61 @@ def mainmenu():
     root.config(menu=menubar)
     root.mainloop()        
 
-def down():
+def Main_Options():
+
+        fr1.grid(row=0,column=0)
+        fr1.configure(bg=bgc)
+
+        b1=tk.Button(fr1,text="Check Activation",command=lambda:(root.destroy(),run("check")),borderwidth=0,bg=btc,fg="white",relief=RAISED)
+        b1.grid(row=0,column=0)
+        coh(b1,"#616161",btc)
+        
+        l1=tk.Label(fr1,text="_____________________________________________________________________________________________",bg=bgc,fg=bgc)
+        l1.grid(row=1,column=0)
+        
+        b2=tk.Button(fr1,text="HWID Activation (For Windows 10, Lifetime)",command=lambda:(root.destroy(),run("hwidact")),borderwidth=0,bg=btc,fg="white",relief=RAISED)
+        b2.grid(row=2,column=0)
+        coh(b2,"#616161",btc)
+
+        l2=tk.Label(fr1,text="_______________________________",bg=bgc,fg=bgc)
+        l2.grid(row=3,column=0)
+
+        b3=tk.Button(fr1,text="KMS38 Activation (For Windows 10, till 2038)",command=lambda:(root.destroy(),run("kms38act")),borderwidth=0,bg=btc,fg="white",relief=RAISED)
+        b3.grid(row=4,column=0)
+        coh(b3,"#616161",btc)
+
+        l3=tk.Label(fr1,text="_______________________________",bg=bgc,fg=bgc)
+        l3.grid(row=5,column=0)
+
+        b4=tk.Button(fr1,text="Online KMS Activation (For All Windows and Office VL versions)",command=lambda:(onlkmsact()),borderwidth=0,bg=btc,fg="white",relief=RAISED)
+        b4.grid(row=6,column=0)
+        coh(b4,"#616161",btc)
+
+        l4=tk.Label(fr1,text="_______________________________",bg=bgc,fg=bgc)
+        l4.grid(row=7,column=0)
+
+        b5=tk.Button(fr1,text="Extras",command=lambda:(extras()),borderwidth=0,bg=btc,fg="white",relief=RAISED)
+        b5.grid(row=8,column=0)
+        coh(b5,"#616161",btc)
+
+def isodowner():
     fr3.destroy()
     fr4.grid(row=0,column=0)
     fr4.configure(bg=bgc)
-
-    st=ttk.Style()
-    root.tk.call("source","PyMas_Files/azure-dark.tcl")
-    st.theme_use("azure-dark")
-
 
     l1=tk.Label(fr4,text="_____________________________________________________________________________________________",bg=bgc,fg=bgc)
     l1.grid(row=0,column=0)
 
     global tv
-    tv=ttk.Treeview(fr4,selectmode="browse")
+    tv=ttk.Treeview(fr4,selectmode="browse",height=12)
     tv.grid(row=0,column=0,columnspan=2)
-    verscrlbar = Scrollbar(fr4,orient ="vertical",command = tv.yview,cursor="target")
-    verscrlbar.grid(row=0,column=2,sticky='ns')
-    tv.configure(xscrollcommand=verscrlbar.set)
     tv["columns"] = ("1","2")
     tv.column("1")
     tv.column("2")
     tv.heading("1",text="ISO_ID")
     tv.heading("2",text="ISO_Name")
 
-    p=open("PyMas_Files/win.csv","r")  
+    p=open(rp("PyWinAct_Files/win.csv"),"r")  
     d=csv.reader(p)
     l=list(d)
     c=1
@@ -74,7 +118,69 @@ def down():
     e1.grid(row=1,column=0,sticky="nsew")
     e1.insert("0","Enter ISO ID here(Delete this before typing)")
     print(e1.get())
-    b1=Button(fr4,text="Download",bg=btc,fg=fgc,borderwidth=0,command=lambda:(isodown(e1.get()),e1.delete(0,10)))
+    b1=Button(fr4,text="Download",bg=btc,fg=fgc,borderwidth=0,command=lambda:(wisodown("w",e1.get()),e1.delete(0,10)))
+    b1.grid(row=1,column=1,sticky="nsew")
+    coh(b1,"#616161",btc)
+    b2t="""Click here if any of the
+given links are not working"""
+    b2=Button(fr4,text=b2t,bg=bgc,fg="#babab8",borderwidth=0,font=("TkDefaultFont",9,'underline'),command=lambda:(webbrowser.open("https://tb.rg-adguard.net/public.php")),relief=RAISED,cursor="dotbox")
+    b2.grid(row=2,column=1,sticky="nsew")
+    cohf(b2,fgc,"#babab8")
+
+    l1=Label(fr4,text="ⓘ Enter ISO ID above and click Download",bg=bgc)  
+    l1.grid(row=2,column=0,columnspan=2)
+
+    b4=tk.Button(fr4,text="Back",command=lambda:(fr4.destroy(),mainmenu()),borderwidth=0,bg="red",fg="white")
+    b4.grid(row=4,column=0,sticky="w")
+    coh(b4,"#616161","red")
+    
+def wisodown(d,c):
+    if d=="w":
+        p=open(rp("PyWinAct_Files/win.csv"),"r")    
+    elif d=="o":
+        p=open(rp("PyWinAct_Files/office.csv"),"r")
+    d=csv.reader(p)
+    l=list(d)
+    temp=[]
+    for i in l:
+        if i[0]==c:    
+            webbrowser.open(i[2])
+        temp.append(i[0])
+    if str(c) not in temp:
+        messagebox.showerror("Error","The ISO ID doesnt even exist dude!"+"/n"+"Try another one")
+
+def oisodowner():
+    fr3.destroy()
+    fr4.grid(row=0,column=0)
+    fr4.configure(bg=bgc)
+
+    
+
+
+    l1=tk.Label(fr4,text="_____________________________________________________________________________________________",bg=bgc,fg=bgc)
+    l1.grid(row=0,column=0)
+
+    global tv
+    tv=ttk.Treeview(fr4,selectmode="browse",height=6)
+    tv.grid(row=0,column=0,columnspan=2)
+    tv["columns"] = ("1","2")
+    tv.column("1")
+    tv.column("2")
+    tv.heading("1",text="ISO_ID")
+    tv.heading("2",text="ISO_Name")
+
+    p=open(rp("PyWinAct_Files/office.csv"),"r")  
+    d=csv.reader(p)
+    l=list(d)
+    c=1
+    for i in l:
+        tv.insert("","end",values =(i[0],i[1]))
+        c+=1
+    e1=Entry(fr4,relief=RAISED)
+    e1.grid(row=1,column=0,sticky="nsew")
+    e1.insert("0","Enter ISO ID here(Delete this before typing)")
+    print(e1.get())
+    b1=Button(fr4,text="Download",bg=btc,fg=fgc,borderwidth=0,command=lambda:(wisodown("o",e1.get()),e1.delete(0,10)))
     b1.grid(row=1,column=1,sticky="nsew")
     coh(b1,"#616161",btc)
     b2t="""Click here if any of the 
@@ -89,19 +195,7 @@ given links are not working"""
     b4=tk.Button(fr4,text="Back",command=lambda:(fr4.destroy(),mainmenu()),borderwidth=0,bg="red",fg="white")
     b4.grid(row=4,column=0,sticky="w")
     coh(b4,"#616161","red")
-    
-def isodown(c):
-    p=open("PyMas_Files/win.csv","r")    
-    d=csv.reader(p)
-    l=list(d)
-    temp=[]
-    for i in l:
-        if i[0]==c:    
-            webbrowser.open(i[2])
-        temp.append(i[0])
-    if str(c) not in temp:
-        messagebox.showerror("Error","The ISO ID doesnt even exist dude!"+"/n"+"Try another one")
-        
+ 
 def menubars():
     #Menubars Used
     global menubar
@@ -127,41 +221,42 @@ def githubme():
 
 def run(a):
     if a=="check":
-        subprocess.call([r"PyMAS_Files\Check_Activation.cmd"])
+        subprocess.call(rp("PyWinAct_Files\Check_Activation.cmd"))
     elif a=="hwidact":
-        subprocess.call([r"PyMAS_Files\HWID_Activation.cmd"])
+        subprocess.call(rp("PyWinAct_Files\HWID_Activation.cmd"))
     elif a=="kms38act":
-        subprocess.call([r"PyMAS_Files\KMS38_Activation.cmd"])
+        subprocess.call(rp("PyWinAct_Files\KMS38_Activation.cmd"))
     elif a=="onlkms":
         onlkmsact()
     elif a=="oldkmsact":
-        subprocess.call([r"PyMAS_Files\Old-act\Activate.cmd"])
+        subprocess.call(rp("PyWinAct_Files\Old-act\Activate.cmd"))
     elif a=="oldkmsren":
-        subprocess.call([r"PyMAS_Files\Old-act\Renewal_Setup.cmd"])
+        subprocess.call(rp("PyWinAct_Files\Old-act\Renewal_Setup.cmd"))
     elif a=="oldkmsunin":
-        subprocess.call([r"PyMAS_Files\Old-act\Uninstall.cmd"])
+        subprocess.call(rp(r"PyWinAct_Files\Old-act\Uninstall.cmd"))
     elif a=="hwidr":
-        os.system(r"notepad.exe PyMAS_Files\Readmefiles\hwid_readme.txt")
+        d=str(rp(r"PyWinAct_Files\Readmefiles\hwid_readme.txt"))
+        os.system(r"notepad.exe"+d)
     elif a=="kms38r":
-        os.system(r"notepad.exe PyMAS_Files\Readmefiles\kms38_readme.txt")
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\kms38_readme.txt"))
     elif a=="extractoemr":
-        os.system(r"notepad.exe PyMAS_Files\Readmefiles\extractoem_readme.txt")
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\extractoem_readme.txt"))
     elif a=="kms38prot":
-        os.system(r"notepad.exe PyMAS_Files\Readmefiles\kms38prot_readme.txt")
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\kms38prot_readme.txt"))
     elif a=="oldkmsr":
-        os.system(r"notepad.exe PyMAS_Files\Readmefiles\oldact_readme.txt")
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\oldact_readme.txt"))
     elif a=="exOEM":
-        subprocess.call([r"PyMAS_Files\Extras\Extract_OEM_Folder.cmd"])
+        subprocess.call(rp("PyWinAct_Files\Extras\Extract_OEM_Folder.cmd"))
     elif a=="win10install":
-        subprocess.call([r"PyMAS_Files\Extras\OEMRET-Install_W10_Key.cmd"])
+        subprocess.call(rp("PyWinAct_Files\Extras\OEMRET-Install_W10_Key.cmd"))
     elif a=="win10change":
-        subprocess.call([r"PyMAS_Files\Extras\OEMRET-Change_W10_Edition.cmd"])
+        subprocess.call(rp("PyWinAct_Files\Extras\OEMRET-Change_W10_Edition.cmd"))
     elif a=="kms38prot":
-        subprocess.call([r"PyMAS_Files\Extras\Protect_Unprotect-KMS38.cmd"])
+        subprocess.call(rp("PyWinAct_Files\Extras\Protect_Unprotect-KMS38.cmd"))
     elif a=="abbodi":
         webbrowser.open("https://forums.mydigitallife.net/threads/74197/")
     elif a=="credits":
-        os.system(r"notepad.exe PyMAS_Files\Readmefiles\Credits.txt")
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\Credits.txt"))
     elif a=="isodown":
         webbrowser.open("https://www.heidoc.net/php/Windows-ISO-Downloader.exe")
 
@@ -171,10 +266,11 @@ def onlkmsact():
     fr2.grid(row=0,column=0)
     fr2.configure(bg=bgc)
 
-    l1=tk.Label(fr2,text="This will skip any permanent HWID and KMS38 Activation.",bg=bgc,fg="white")
+    l1=tk.Label(fr2,text="This will skip any permanent HWID and KMS38 Activation",bg=bgc,fg="white")
     l1.grid(row=1,column=0)
     
-    l2=tk.Label(fr2,text="KMS activates for 180 Days.(For core/ProWMC edition it is 30/45 Days)",bg=bgc,fg="white")
+    l2=tk.Label(fr2,text='''KMS activates for 180 Days.Click on Activation Renewal for automatic renewal.
+                          (For core/ProWMC edition it is 30/45 Days)''',bg=bgc,fg="white")
     l2.grid(row=2,column=0)
     
     l3=tk.Label(fr2,text="_____________________________________________________________________________________________",bg=bgc,fg=bgc)
@@ -238,15 +334,22 @@ def extras():
     l7=tk.Label(fr3,text="_______________________________",bg=bgc,fg=bgc)
     l7.grid(row=11,column=0)
 
-    b6=tk.Button(fr3,text="Windows ISO Downloader",command=down,borderwidth=0,bg=btc,fg="white")
+    b6=tk.Button(fr3,text="Windows ISO Downloader",command=isodowner,borderwidth=0,bg=btc,fg="white")
     b6.grid(row=12,column=0)
     coh(b6,"#616161",btc)
     
     l7=tk.Label(fr3,text="_______________________________",bg=bgc,fg=bgc)
     l7.grid(row=13,column=0)
 
+    b7=tk.Button(fr3,text="Office ISO Downloader",command=oisodowner,borderwidth=0,bg=btc,fg="white")
+    b7.grid(row=14,column=0)
+    coh(b7,"#616161",btc)
+    
+    l8=tk.Label(fr3,text="_______________________________",bg=bgc,fg=bgc)
+    l8.grid(row=15,column=0)
+
     b7=tk.Button(fr3,text="Back",command=lambda:(fr3.destroy(),mainmenu()),borderwidth=0,bg="red",fg="white")
-    b7.grid(row=14,column=0,sticky="w")
+    b7.grid(row=16,column=0,sticky="w")
     coh(b7,"#616161","red")
     
 def coh(button, colorOnHover, colorOnLeave):
@@ -264,44 +367,5 @@ def cohf(button, colorOnHover, colorOnLeave):
   
     button.bind("<Leave>", func=lambda e: button.config(
         fg=colorOnLeave))
-
-
-def Main_Options():
-
-        fr1.grid(row=0,column=0)
-        fr1.configure(bg=bgc)
-
-        b1=tk.Button(fr1,text="Check Activation",command=lambda:(root.destroy(),run("check")),borderwidth=0,bg=btc,fg="white",relief=RAISED)
-        b1.grid(row=0,column=0)
-        coh(b1,"#616161",btc)
-        
-        l1=tk.Label(fr1,text="_____________________________________________________________________________________________",bg=bgc,fg=bgc)
-        l1.grid(row=1,column=0)
-        
-        b2=tk.Button(fr1,text="HWID Activation",command=lambda:(root.destroy(),run("hwidact")),borderwidth=0,bg=btc,fg="white",relief=RAISED)
-        b2.grid(row=2,column=0)
-        coh(b2,"#616161",btc)
-
-        l2=tk.Label(fr1,text="_______________________________",bg=bgc,fg=bgc)
-        l2.grid(row=3,column=0)
-
-        b3=tk.Button(fr1,text="KMS38 Activation",command=lambda:(root.destroy(),run("kms38act")),borderwidth=0,bg=btc,fg="white",relief=RAISED)
-        b3.grid(row=4,column=0)
-        coh(b3,"#616161",btc)
-
-        l3=tk.Label(fr1,text="_______________________________",bg=bgc,fg=bgc)
-        l3.grid(row=5,column=0)
-
-        b4=tk.Button(fr1,text="Online KMS Activation",command=lambda:(onlkmsact()),borderwidth=0,bg=btc,fg="white",relief=RAISED)
-        b4.grid(row=6,column=0)
-        coh(b4,"#616161",btc)
-
-        l4=tk.Label(fr1,text="_______________________________",bg=bgc,fg=bgc)
-        l4.grid(row=7,column=0)
-
-        b5=tk.Button(fr1,text="Extras",command=lambda:(extras()),borderwidth=0,bg=btc,fg="white",relief=RAISED)
-        b5.grid(row=8,column=0)
-        coh(b5,"#616161",btc)
-
 
 mainmenu()
