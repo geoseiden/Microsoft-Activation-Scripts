@@ -149,6 +149,47 @@ def wisodown(d,c):
     if str(c) not in temp:
         messagebox.showerror("Error","The ISO ID doesnt even exist dude!"+"/n"+"Try another one")
 
+def run(a):
+    if a=="check":
+        subprocess.call(rp("PyWinAct_Files\Check_Activation.cmd"))
+    elif a=="hwidact":
+        subprocess.call(rp("PyWinAct_Files\HWID_Activation.cmd"))
+    elif a=="kms38act":
+        subprocess.call(rp("PyWinAct_Files\KMS38_Activation.cmd"))
+    elif a=="onlkms":
+        onlkmsact()
+    elif a=="oldkmsact":
+        subprocess.call(rp("PyWinAct_Files\Old-act\Activate.cmd"))
+    elif a=="oldkmsren":
+        subprocess.call(rp("PyWinAct_Files\Old-act\Renewal_Setup.cmd"))
+    elif a=="oldkmsunin":
+        subprocess.call(rp(r"PyWinAct_Files\Old-act\Uninstall.cmd"))
+    elif a=="hwidr":
+        d=str(rp(r"PyWinAct_Files\Readmefiles\hwid_readme.txt"))
+        os.system(r"notepad.exe"+d)
+    elif a=="kms38r":
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\kms38_readme.txt"))
+    elif a=="extractoemr":
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\extractoem_readme.txt"))
+    elif a=="kms38prot":
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\kms38prot_readme.txt"))
+    elif a=="oldkmsr":
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\oldact_readme.txt"))
+    elif a=="exOEM":
+        subprocess.call(rp("PyWinAct_Files\Extras\Extract_OEM_Folder.cmd"))
+    elif a=="win10install":
+        subprocess.call(rp("PyWinAct_Files\Extras\OEMRET-Install_W10_Key.cmd"))
+    elif a=="win10change":
+        subprocess.call(rp("PyWinAct_Files\Extras\OEMRET-Change_W10_Edition.cmd"))
+    elif a=="kms38prot":
+        subprocess.call(rp("PyWinAct_Files\Extras\Protect_Unprotect-KMS38.cmd"))
+    elif a=="abbodi":
+        webbrowser.open("https://forums.mydigitallife.net/threads/74197/")
+    elif a=="credits":
+        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\Credits.txt"))
+    elif a=="r2v":
+        subprocess.call(rp("PyWinact_Files\r2v.cmd"))
+
 def oisodowner():
     fr3.destroy()
     fr4.grid(row=0,column=0)
@@ -218,45 +259,6 @@ def menubars():
 
 def githubme():
     webbrowser.open("https://github.com/geoseiden")
-
-def run(a):
-    if a=="check":
-        subprocess.call(rp("PyWinAct_Files\Check_Activation.cmd"))
-    elif a=="hwidact":
-        subprocess.call(rp("PyWinAct_Files\HWID_Activation.cmd"))
-    elif a=="kms38act":
-        subprocess.call(rp("PyWinAct_Files\KMS38_Activation.cmd"))
-    elif a=="onlkms":
-        onlkmsact()
-    elif a=="oldkmsact":
-        subprocess.call(rp("PyWinAct_Files\Old-act\Activate.cmd"))
-    elif a=="oldkmsren":
-        subprocess.call(rp("PyWinAct_Files\Old-act\Renewal_Setup.cmd"))
-    elif a=="oldkmsunin":
-        subprocess.call(rp(r"PyWinAct_Files\Old-act\Uninstall.cmd"))
-    elif a=="hwidr":
-        d=str(rp(r"PyWinAct_Files\Readmefiles\hwid_readme.txt"))
-        os.system(r"notepad.exe"+d)
-    elif a=="kms38r":
-        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\kms38_readme.txt"))
-    elif a=="extractoemr":
-        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\extractoem_readme.txt"))
-    elif a=="kms38prot":
-        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\kms38prot_readme.txt"))
-    elif a=="oldkmsr":
-        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\oldact_readme.txt"))
-    elif a=="exOEM":
-        subprocess.call(rp("PyWinAct_Files\Extras\Extract_OEM_Folder.cmd"))
-    elif a=="win10install":
-        subprocess.call(rp("PyWinAct_Files\Extras\OEMRET-Install_W10_Key.cmd"))
-    elif a=="win10change":
-        subprocess.call(rp("PyWinAct_Files\Extras\OEMRET-Change_W10_Edition.cmd"))
-    elif a=="kms38prot":
-        subprocess.call(rp("PyWinAct_Files\Extras\Protect_Unprotect-KMS38.cmd"))
-    elif a=="abbodi":
-        webbrowser.open("https://forums.mydigitallife.net/threads/74197/")
-    elif a=="credits":
-        os.system("notepad.exe"+rp("PyWinAct_Files\Readmefiles\Credits.txt"))
 
 def onlkmsact():
     fr1.destroy()
