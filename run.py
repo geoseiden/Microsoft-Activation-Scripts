@@ -1,10 +1,10 @@
-import sys
 import os
+import csv
+import sys
+import webbrowser
 import subprocess
 import tkinter as tk
-import webbrowser
 from tkinter import *
-import csv
 from tkinter import ttk
 from tkinter import messagebox
 
